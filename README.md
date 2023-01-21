@@ -45,6 +45,16 @@ Sau đó ,ta chuyển về B64 được:
 Tiếp tục chuyển về ASCII:`KPSVNUJBRSANCCLAEAEEGKKOUOEOEATTTOSESROYRFLSI`
 ![Screenshot_20230121_010526](https://user-images.githubusercontent.com/83689890/213846220-ffa08f2f-5170-4ca0-b63c-225dcb0fb854.png)
 
+Vì theo đề bài có keyword chuyến tàu vô tận,nên mình đoán đây là loại mật mã đường tàu (Rail fence)
+
+Dán đoạn mã vào trang `https://www.boxentriq.com/code-breaking/rail-fence-cipher`
+
+![Screenshot_20230121_011206](https://user-images.githubusercontent.com/83689890/213846371-50648ab9-6f9d-4ceb-ac03-07d3725cd798.png)
+
+Được kết quả là `KCSCPLEASESAVERENGOKUKYOJUROBEFORELASTSTATION`
+
+Format lại thành flag : `KCSC{PLEASESAVERENGOKUKYOJUROBEFORELASTSTATION}
+
 
 
 

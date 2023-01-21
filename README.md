@@ -53,8 +53,33 @@ Dán đoạn mã vào trang `https://www.boxentriq.com/code-breaking/rail-fence-
 
 Được kết quả là `KCSCPLEASESAVERENGOKUKYOJUROBEFORELASTSTATION`
 
-Format lại thành flag : `KCSC{PLEASESAVERENGOKUKYOJUROBEFORELASTSTATION}
+Format lại thành flag : `KCSC{PLEASESAVERENGOKUKYOJUROBEFORELASTSTATION}`
+
+
+# ezenc
+Nội dung cipher là 1 đoạn mã HEX :
+```
+4e544d7a4d44526c4e5451314d544d7a4e7a51304e6a59794e6d51305a5463324e5745304e7a5a6a4e7a553159544d784d7a6b305954597a4d7a457a4f5451304e6a497a4d6a4d354e7a4d304f54557a4e4455324f4459324e54457a5a444e6b
+```
+
+Mình dùng CyberChef để giải challenge này:
+
+
+![Screenshot_20230121_011638](https://user-images.githubusercontent.com/83689890/213846470-c0cf7796-27be-43ce-b442-7ae850ee8bfe.png)
+Chuyển unhex đoạn mã được :`NTMzMDRlNTQ1MTMzNzQ0NjYyNmQ0ZTc2NWE0NzZjNzU1YTMxMzk0YTYzMzEzOTQ0NjIzMjM5NzM0OTUzNDU2ODY2NTEzZDNk`
+
+Tiếp tục chuyển B64 về ASCII:
+
+
+
+![Screenshot_20230121_011813](https://user-images.githubusercontent.com/83689890/213846558-24024c6f-f885-4fdb-af15-7561d945b942.png)
+
+Kết quả tiếp tục được một đoạn mã Hex :`53304e5451337446626d4e765a476c755a31394a63313944623239734953456866513d3d`
+
+Tiếp tục tương tự tìm được flag : `KCSC{Encoding_Is_Cool!!!}`
 
 
 
 
+
+![Screenshot_20230121_011956](https://user-images.githubusercontent.com/83689890/213846604-cef1bcb1-a0d8-4f34-8d64-4d4816e40d40.png)

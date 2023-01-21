@@ -135,7 +135,7 @@ c3 = 198527236046629960640791853635411802548 #c3 ≡ B mod x3
 # if you have secret, please XOR with message to get flag
 message = b't\x9e5\xe5/\xb9f\x1d\xffpa\x8b\xb0K\xfc\xe01\xfe\xba\x02\xf0\xe1\x8f0\xa5-\xa6\x0b\x02\x91Do'
 
-
+```
 
 
 Đây là loại mã hóa Diffie–Hellman Key Exchange

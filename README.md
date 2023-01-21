@@ -1,7 +1,7 @@
 # Crypto
 Bùi Minh Phúc AT17B
 
-#Tet_is_ya_best
+# Tet_is_ya_best
 Ciphertext bài cho:
 lyl, rwns dmsfm rn wkmrx myf iyrx pynljorw, jn luy ejvvynl lxrqjljsmrw pynljorw jm ojyl mrh.
 lyl jn knkrwwi pxsh luy ymq sp trmkrxi ls yrxwi pyexkrxi. 

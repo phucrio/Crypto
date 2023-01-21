@@ -83,3 +83,28 @@ Tiếp tục tương tự tìm được flag : `KCSC{Encoding_Is_Cool!!!}`
 
 
 ![Screenshot_20230121_011956](https://user-images.githubusercontent.com/83689890/213846604-cef1bcb1-a0d8-4f34-8d64-4d4816e40d40.png)
+
+
+# Waiting xor you
+
+Đoạn code bài cho:
+```
+def xor(a: bytes, b: bytes):
+    return bytes([a[i % len(a)] ^ b[i % len(b)] for i in range(max(len(a), len(b)))])
+
+
+flag = b"KCSC{???????????????????????????}"
+key = b"??????"
+print(xor(flag, key))
+#b'>0\x0c,\x1a+:=\x100(5*,\x08*(2<=\x11!> E!\x006Q3VP"'
+```
+
+Đầu tiên ,mình xor chuỗi kí tự bài cho `b'>0\x0c,\x1a+:=\x100(5*,\x08*(2<=\x11!> E!\x006Q3VP"'`  với chuỗi `"KCSC{` để tìm key:
+![Screenshot_20230121_012541](https://user-images.githubusercontent.com/83689890/213846817-e2bdb4d3-ba84-4d18-9003-597e29a6ca2b.png)
+
+Kết quả được 5 kí tự đầu của key là us_oa ,mình đoán kí tự cuối là f key sẽ là `us_oaf`
+
+
+![Screenshot_20230121_012822](https://user-images.githubusercontent.com/83689890/213846911-ad8f4ce3-837e-4c6c-be5b-610980cbf5ca.png)
+
+Đúng như dự đoán ta tìm được flag là `KCSC{MONO_IS__WEITINNN_F0R_Y0U##}`

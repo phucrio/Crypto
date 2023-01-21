@@ -18,4 +18,9 @@ ls ojylmrhyny, lyl jn luy urccjynl ljhy sp rww iyrx rxskmq, hyheyxn jm r prhjwi 
 rww jm rww, lyl jn rww reskl ergd ls sxjvjmn, ey vssq ls sluyxn, ymtsi luy cxygjskn hshyml, rmq fjnu psx luy eynl ls gshy.
 luy pwrv jn: dgng{lyl_lyl_lyl_lyl_qym_xsj__gukg_grg_erm_mrh_hsj_lurl_mujyk_nkg_dusy__wko_pxsh_wkwkkkkkkkkkkkk}
 ```
+Dự đoán đây là một loại mật mã thay thế 
+Copy vào trang `https://www.dcode.fr/monoalphabetic-substitution`
 
+![Screenshot_20230121_124940](https://user-images.githubusercontent.com/83689890/213845709-898a5876-f748-4fbb-8788-240dad5eba31.png)
+Được flag là `KCSC{TET_TET_TET_TET_DEN_ROI__CHUC_CAC_BAN_NAM_MOI_THAT_NHIEU_SUC_KHOE__LUV_FROM_LULUUUUUUUUUUUU}`
+Format lại thành chữ thường `KCSC{tet_tet_tet_tet_den_roi__chuc_cac_ban_nam_moi_that_nhieu_suc_khoe__luv_from_luluuuuuuuuuuuu}`

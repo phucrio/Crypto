@@ -38,7 +38,8 @@ Trong file message.txt bài cho là một chuỗi nhị phân:
 Sau đó ,ta chuyển về B64 được:
 `S1BTVk5VSkJSU0FOQ0NMQUVBRUVHS0tPVU9FT0VBVFRUT1NFU1JPWVJGTFNJ`
 
-![Screenshot_20230121_124940](https://user-images.githubusercontent.com/83689890/213846183-f83c7371-af6f-4064-b129-5f731f504237.png)
+![Screenshot_20230121_010605](https://user-images.githubusercontent.com/83689890/213846242-7a323a81-c79b-4d7e-964c-928693ee7fad.png)
+
 
 
 Tiếp tục chuyển về ASCII:`KPSVNUJBRSANCCLAEAEEGKKOUOEOEATTTOSESROYRFLSI`

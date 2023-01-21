@@ -108,3 +108,86 @@ Kết quả được 5 kí tự đầu của key là us_oa ,mình đoán kí t�
 ![Screenshot_20230121_012822](https://user-images.githubusercontent.com/83689890/213846911-ad8f4ce3-837e-4c6c-be5b-610980cbf5ca.png)
 
 Đúng như dự đoán ta tìm được flag là `KCSC{MONO_IS__WEITINNN_F0R_Y0U##}`
+
+# Truy lùng tổ chức áo đen
+Đoạn code bài cho:
+```
+# Two people using DHKE, but a or b is small 
+p = 94222223051318251788373116079823589263589635857630651803373651523757275090527 
+g = 2
+
+a = ???? 
+A = 31822216633104443305987801224128660665880110686370239075045238816060763002874
+b = ????
+B = ????
+secret = A^b mod p
+
+# someone find B inline
+
+x1 = 173184786344890217883981201779895724483
+x2 = 253233715256032720399137001948100003639
+x3 = 248014991081832114029625969097077251431
+
+c1 = 101180082674764329281306139226797850515 #c1 ≡ B mod x1 
+c2 = 83356617645903402795422165107262525830  #c2 ≡ B mod x2
+c3 = 198527236046629960640791853635411802548 #c3 ≡ B mod x3
+
+# if you have secret, please XOR with message to get flag
+message = b't\x9e5\xe5/\xb9f\x1d\xffpa\x8b\xb0K\xfc\xe01\xfe\xba\x02\xf0\xe1\x8f0\xa5-\xa6\x0b\x02\x91Do'
+
+
+
+
+Đây là loại mã hóa Diffie–Hellman Key Exchange
+Xem thêm:`https://cryptobook.nakov.com/key-exchange/diffie-hellman-key-exchange`
+
+![Screenshot_20230121_013116](https://user-images.githubusercontent.com/83689890/213847056-0d0fadf1-e3e7-4d38-a320-54d56147568e.png)
+
+
+Ở đây để tìm được flag đầu tiên ta phải tìm được `secret` muốn tìm được `secret` ta phải biết được cặp số `A`,`b` hoặc `B`,`a` 
+
+Đầu tiên ta đi tìm B ,muốn tính B ta phải giải được hệ phương trình đồng dư 
+
+```
+c1 ≡ B mod x1 
+c2 ≡ B mod x2
+c3 ≡ B mod x3
+```
+
+Ở đây mình dùng Thuật toán Chinese Remainder `https://www.dcode.fr/chinese-remainder`
+Sau khi nhập x1,x2,x3 và c1,c2,c3 ta tính được B = `60947517329365239986236525240654550233850393868256513241317727505179049380957`
+
+
+![Screenshot_20230121_015139](https://user-images.githubusercontent.com/83689890/213847696-0fecc30b-7eff-4000-a9d5-e0bae37592d3.png)
+
+
+Bây giờ đã có `A` và `B` ta chỉ cần tìm được `a` hoặc `b` là sẽ tính được `secret` 
+
+Vì đoạn code có note `Two people using DHKE, but a or b is small ` nên a hoặc b sẽ là số nhỏ dễ dàng tìm được
+
+Mình cho chạy 1 đoạn code để thử tìm a và b 
+```
+for i in range(2,100000):
+    if pow(g,i,p) == A:
+        print("b = "+str(i))
+        break;
+    if pow(g,i,p) == B:
+        print("a = "+str(i))
+        break
+
+```
+
+![Screenshot_20230121_020011](https://user-images.githubusercontent.com/83689890/213848019-24314fa5-b813-4a3b-b0bf-74a0b450a408.png)
+
+
+ Kết quả tìm được a = `51803`
+ 
+ Theo công thức bài cho ta tính được `secret` = `28886891124482956689744265441861311809844009449147016760780113274230250890514`
+ 
+ ![Screenshot_20230121_020145](https://user-images.githubusercontent.com/83689890/213848056-ceaadf11-74c4-4633-a2d5-3542933d7c3f.png)
+
+Cuối cùng ta chuyển `secret` sáng bytes và xor với chuỗi kí tự bài cho ban đầu `b't\x9e5\xe5/\xb9f\x1d\xffpa\x8b\xb0K\xfc\xe01\xfe\xba\x02\xf0\xe1\x8f0\xa5-\xa6\x0b\x02\x91Do'`
+
+![Screenshot_20230121_020250](https://user-images.githubusercontent.com/83689890/213848097-bebc7c65-9e6c-40df-b79a-1c47660a9522.png)
+
+Tìm được flag là `KCSC{S3cr3t_m4k3_a_W0m3n_women!}`
